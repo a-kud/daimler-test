@@ -2,8 +2,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 
-import initialState from 'reducers/initialState';
-import rootReducer from 'reducers/';
+import initialState from '../reducers/initialState';
+import rootReducer from '../reducers/';
 
 export const getComposeEnhancers = () => {
     const isUsingDevTools = process.env.NODE_ENV !== 'production' &&

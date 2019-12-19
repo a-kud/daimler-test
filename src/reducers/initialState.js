@@ -1,3 +1,5 @@
-const initialState = {};
+const initialState = {
+    moovies: []
+};
 
-export const initialState;
+export default initialState;
