@@ -20,6 +20,8 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "standard": "^14.3.1"
   },
   "scripts": {
@@ -58,5 +60,17 @@
       "/src/data/"
     ],
     "parser": "babel-eslint"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged && react-scripts test --watchAll=false"
+    }
   }
 }
