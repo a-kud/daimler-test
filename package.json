@@ -51,7 +51,8 @@
       "describe",
       "it",
       "beforeEach",
-      "expect"
+      "expect",
+      "jest"
     ],
     "ignore": [
       "/src/data/"
