@@ -1,5 +1,8 @@
 const initialState = {
-  moovies: []
+  moovies: {
+    moovieList: [],
+    moovieSearchValue: ''
+  }
 }
 
 export default initialState
