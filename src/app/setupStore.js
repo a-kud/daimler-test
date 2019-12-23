@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant'
-
+import rootSaga from '../sagas'
 import initialState from '../reducers/initialState'
 import rootReducer from '../reducers/'
 
@@ -31,6 +31,7 @@ const setupStore = () => {
     composeEnhancers(applyMiddleware(...middleware))
   )
 
+  sagaMiddleware.run(rootSaga)
   return store
 }
 

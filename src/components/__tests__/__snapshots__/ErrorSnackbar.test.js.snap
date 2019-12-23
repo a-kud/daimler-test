@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorSnackbar Component should render correctly 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Snackbar))
+    ContentProps={
+      Object {
+        "aria-describedby": "message-id",
+        "classes": Object {
+          "root": "makeStyles-root-1",
+        },
+      }
+    }
+    action={
+      Array [
+        <ForwardRef(WithStyles)
+          aria-label="close"
+          color="inherit"
+          onClick={[Function]}
+        >
+          <UNDEFINED />
+        </ForwardRef(WithStyles)>,
+      ]
+    }
+    anchorOrigin={
+      Object {
+        "horizontal": "center",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={6000}
+    message={
+      <span
+        id="message-id"
+      />
+    }
+    onClose={[Function]}
+    open={false}
+  />
+</Fragment>
+`;
