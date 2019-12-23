@@ -1,7 +1,9 @@
 const initialState = {
   moovies: {
     moovieList: [],
-    moovieSearchValue: ''
+    moovieSearchValue: null,
+    isMoovieListLoading: false,
+    error: null
   }
 }
 

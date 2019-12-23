@@ -10,10 +10,9 @@ jest.mock('react-redux', () => ({
 
 describe('Header Component', () => {
   const { useDispatch } = require('react-redux')
-  const wrapper = shallow(<Header />)
-
   useDispatch.mockImplementation(() => jest.fn())
 
+  const wrapper = shallow(<Header />)
   it('should render correctly', () => {
     expect(toJson(wrapper)).toMatchSnapshot()
   })

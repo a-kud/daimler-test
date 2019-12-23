@@ -1,6 +1,6 @@
 import initialState from '../initialState'
 import mooviesReducer from '../mooviesReducer'
-import { MOOVIES_SEARCH_FIELD_CHANGE } from '../../actions/types'
+import { SET_MOOVIES_SEARCH_FIELD_CHANGE } from '../../actions/types'
 
 describe('Moovies Reducer', () => {
   const { moovies: mooviesInitialState } = initialState
@@ -9,10 +9,10 @@ describe('Moovies Reducer', () => {
     expect(mooviesReducer(undefined, {})).toEqual(mooviesInitialState)
   })
 
-  it('should return correct state on MOOVIES_SEARCH_FIELD_CHANGE', () => {
+  it('should return correct state on SET_MOOVIES_SEARCH_FIELD_CHANGE', () => {
     const value = 'foo'
     expect(
-      mooviesReducer(mooviesInitialState, { type: MOOVIES_SEARCH_FIELD_CHANGE, value })
+      mooviesReducer(mooviesInitialState, { type: SET_MOOVIES_SEARCH_FIELD_CHANGE, value })
     ).toEqual({
       ...mooviesInitialState,
       moovieSearchValue: value
