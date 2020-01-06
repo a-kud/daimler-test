@@ -15,7 +15,7 @@ const mooviesReducer = (
     }
     case GET_MOOVIES_REQUEST: {
       return {
-        ...state,
+        ...state,  
         isMoovieListLoading: true,
         error: null
       }
@@ -26,7 +26,6 @@ const mooviesReducer = (
         ...state,
         isMoovieListLoading: false,
         moovieList: [],
-        error
       }
     }
     case GET_MOOVIES_SUCCESS: {
